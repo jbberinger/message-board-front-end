@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
-import './styles/global.scss';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import './styles/App.scss';
 import Home from './components/Home';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 const App: React.FC = () => {
-  const [apiResponse, setApiResponse] = useState('');
-
-  // fetch('/api')
-  //   .then(response => response.text())
-  //   .then(text => setApiResponse(text));
-
   return (
     <BrowserRouter>
-      <div className='App'>
-        <Home />
-        <Route path='/home' component={Home} />
-      </div>
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/login' component={Login} />
+        <Route path='/signup' component={Signup} />
+        <Route path='/signup/finish' component={Signup} />
+      </Switch>
     </BrowserRouter>
   );
 };

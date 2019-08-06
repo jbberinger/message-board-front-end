@@ -1,0 +1,109 @@
+@import '_global.scss';
+
+.login-container {
+  @include flex(center, flex-start, column);
+  color: white;
+  background: black;
+  height: calc(100vh-10px);
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.login-form-heading {
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.login-form {
+  @include flex(center, center, column);
+  margin-bottom: 10px;
+  min-width: 190px;
+}
+
+.login-signup-form {
+  @include flex(center, center, column);
+  min-width: 190px;
+}
+
+.login-input-label {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+.login-input {
+  border: transparent solid 1.5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: ease-out 0.25s;
+  &:focus,
+  &:hover {
+    border: blue solid 1.5px;
+    outline: none;
+  }
+}
+
+.login-button {
+  background: white;
+  font-family: inherit;
+  font-weight: 500;
+  border: transparent solid 1.5px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 3px;
+  outline: none;
+  transition: ease-out 0.25s;
+  &:focus,
+  &:hover {
+    border: blue solid 1.5px;
+    outline: none;
+  }
+}
+
+.login-forgot-password-link {
+  width: 100%;
+  padding-top: 11px;
+  text-align: left;
+  text-decoration: underline white;
+  color: inherit;
+  outline: none;
+  transition: ease-out 0.25s;
+  &:hover,
+  &:focus {
+    text-decoration: underline blue;
+  }
+}
+.invalid-login {
+  color: red;
+  width: 100%;
+  text-align: left;
+  margin-top: 3px;
+}
+
+.invalid-form-message {
+  color: red;
+  width: 100%;
+  text-align: left;
+  margin-top: -5px;
+  ul {
+    margin: 0;
+    padding-left: 30px;
+  }
+}
+
+.signup-next {
+  text-decoration: none;
+  color: black;
+  font-family: inherit;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-icon {
+  height: 2rem;
+  margin-bottom: -6px;
+}
